@@ -42,6 +42,51 @@
     a:hover {
       text-decoration: underline;
     }
+
+    .project-gallery {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+    margin-top: 18px;
+  }
+
+  .gallery-item {
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    padding: 10px;
+    background: #fafafa;
+  }
+
+  .gallery-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 8px;
+  }
+
+  .gallery-item figcaption {
+    margin-top: 8px;
+    font-size: 0.95rem;
+    color: #555;
+  }
+
+  .gallery-title {
+    margin-top: 18px;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: #0f172a;
+  }
+
+  .note {
+    font-size: 0.95rem;
+    color: #555;
+  }
+
+  @media (max-width: 700px) {
+    .project-gallery {
+      grid-template-columns: 1fr;
+    }
+  }  
   </style>
 </head>
 <body>
@@ -76,14 +121,49 @@
     <h2>Selected Projects</h2>
 
     <div class="project">
-      <h3>Power Automate Workflow for Calendly Revenue and Cost Center Allocation</h3>
-      <p><strong>Context:</strong> Appointment and revenue-related information from Calendly was previously extracted manually, requiring users to navigate schedules, type details into Excel, apply business rules by hand, and then transfer the final file to a shared folder for accounting use.</p>
-      <p><strong>Tools:</strong> Power Automate, Calendly API, CSV transformation, business rules logic, Excel</p>
-      <p><strong>What I did:</strong> Developed an automated workflow that extracts Calendly data through the API, transforms and organizes it into a structured CSV file, and applies predefined business rules to assign each generated amount to the correct cost center or corporate account.</p>
-      <p><strong>Business Value:</strong> The automated output supports internal administration, month-end close activities, and annual audit processes by improving consistency, traceability, and reporting readiness.</p>
-      <p><strong>Impact:</strong> Reduced manual user interaction by approximately 90%, improved processing efficiency, and lowered the risk of manual entry errors.</p>
-      <p><strong>Confidentiality:</strong> Workflow logic, source files, and internal accounting rules are proprietary; this portfolio summary highlights the process design and business impact.</p>
+    <h3>Power Automate Workflow for Calendly Revenue and Cost Center Allocation</h3>
+    <p><strong>Context:</strong> Appointment and revenue-related information from Calendly was previously extracted manually, requiring users to navigate schedules, type details into Excel, apply business rules by hand, and then transfer the final file to a shared folder for accounting use.</p>
+    <p><strong>Tools:</strong> Power Automate, Calendly API, CSV transformation, business rules logic, Excel</p>
+    <p><strong>What I did:</strong> Developed an automated workflow that extracts Calendly data through the API, transforms and organizes it into a structured CSV file, and applies predefined business rules to assign each generated amount to the correct cost center or corporate account.</p>
+    <p><strong>Business Value:</strong> The automated output supports internal administration, month-end close activities, and annual audit processes by improving consistency, traceability, and reporting readiness.</p>
+    <p><strong>Impact:</strong> Reduced manual user interaction by approximately 90%, improved processing efficiency, and lowered the risk of manual entry errors.</p>
+    <p><strong>Confidentiality:</strong> Workflow logic, source files, and internal accounting rules are proprietary; this portfolio summary highlights the process design and business impact.</p>
+
+    <p class="gallery-title">Workflow Snapshots</p>
+    <p class="note">
+      Redacted screenshots showing the workflow structure used to automate extraction, transformation, validation, and allocation logic.
+    </p>
+
+    <div class="project-gallery">
+      <figure class="gallery-item">
+        <a href="images/calendly-flow-overview1.png" target="_blank">
+          <img src="images/calendly-flow-overview1.png" alt="Calendly workflow overview step 1">
+        </a>
+        <figcaption>Workflow overview and trigger structure.</figcaption>
+      </figure>
+
+      <figure class="gallery-item">
+        <a href="images/calendly-flow-overview2.png" target="_blank">
+          <img src="images/calendly-flow-overview2.png" alt="Calendly workflow overview step 2">
+        </a>
+        <figcaption>Data extraction and transformation sequence.</figcaption>
+      </figure>
+
+      <figure class="gallery-item">
+        <a href="images/calendly-flow-overview3.png" target="_blank">
+          <img src="images/calendly-flow-overview3.png" alt="Calendly workflow overview step 3">
+        </a>
+        <figcaption>Business rules and allocation logic.</figcaption>
+      </figure>
+
+      <figure class="gallery-item">
+        <a href="images/calendly-flow-overview4.png" target="_blank">
+          <img src="images/calendly-flow-overview4.png" alt="Calendly workflow overview step 4">
+        </a>
+        <figcaption>Structured output for accounting and audit support.</figcaption>
+      </figure>
     </div>
+  </div>
 
     <div class="project">
       <h3>Inventory and Replenishment Analysis</h3>
