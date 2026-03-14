@@ -118,7 +118,7 @@
     </p>
     <p>
       <a href="mailto:cervantes.vargas.b@gmail.com">Email</a> |
-      <a href="https://www.linkedin.com/" target="_blank">LinkedIn</a>
+      <a href="https://www.linkedin.com/in/bryan-cervantes-658700119/" target="_blank">LinkedIn</a>
     </p>
   </header>
 
@@ -181,23 +181,75 @@
   </div>
 
     <div class="project">
-      <h3>Inventory and Replenishment Analysis</h3>
-      <p><strong>Context:</strong> Inventory decisions required better support through demand and replenishment analysis.</p>
-      <p><strong>Tools:</strong> Excel, ERP systems, inventory analysis</p>
-      <p><strong>What I did:</strong> Reviewed stock behavior, reorder logic, and lead-time considerations to support replenishment decisions.</p>
-      <p><strong>Impact:</strong> Supported stock availability and planning visibility.</p>
-      <p><strong>Confidentiality:</strong> Detailed files and internal models are employer property.</p>
+      <h3>Automated Multi-Source Maritime Data Extraction and Daily Reporting</h3>
+      <p><strong>Context:</strong> Critical maritime traffic information was manually collected every morning from two different sources: a user-access API portal and a public daily PDF report containing vessel traffic updates. The manual process required early-morning user intervention and delayed access to relevant information for decision-making.</p>
+      <p><strong>Tools:</strong> Python, API integration, web scraping, PDF parsing, CSV transformation, workflow automation</p>
+      <p><strong>What I did:</strong> Developed a Python-based automated process that extracted data from an authenticated API source, applied filtering and selection logic, and transformed the results into a structured CSV file. In parallel, the solution downloaded a public PDF report through web scraping, parsed the document in Python, selected only the records that met predefined business criteria, and consolidated both sources into a single daily output.</p>
+      <p><strong>Business Value:</strong> The consolidated file was distributed automatically to stakeholders every day, giving them earlier access to relevant operational information and supporting faster, more informed decisions.</p>
+      <p><strong>Impact:</strong> Eliminated the need for manual early-morning execution, improved consistency in data delivery, and transformed a repetitive manual process into a scheduled daily routine.</p>
+      <p><strong>Confidentiality:</strong> Source logic, scripts, and business filters are proprietary; this summary focuses on the workflow design and operational impact.</p>
+
+      <p class="gallery-title">Workflow Snapshot</p>
+      <p class="note">
+        Redacted screenshot showing the automated Python workflow used for extraction, filtering, consolidation, and daily delivery.
+      </p>
+
+      <div class="project-gallery">
+        <figure class="gallery-item">
+          <a href="./images/Python-flow-overview1.png" target="_blank">
+            <img src="./images/Python-flow-overview1.png" alt="Python workflow overview">
+          </a>
+          <figcaption>Automated extraction, consolidation, and reporting workflow.</figcaption>
+        </figure>
+      </div>
     </div>
 
     <div class="project">
-      <h3>Data Reconciliation and Process Support</h3>
-      <p><strong>Context:</strong> Business processes depended on accurate records across different sources and teams.</p>
-      <p><strong>Tools:</strong> Excel, Power Query, SQL</p>
-      <p><strong>What I did:</strong> Validated records, reconciled information, and organized reporting outputs for operational and business use.</p>
-      <p><strong>Impact:</strong> Improved accuracy and reduced inconsistencies in reporting.</p>
-      <p><strong>Confidentiality:</strong> Portfolio content is summarized to protect employer-owned information.</p>
+      <h3>Python Workflow for Large-Scale Excel Data Cleaning and Standardization</h3>
+      <p><strong>Context:</strong> Multiple Excel files containing large operational datasets needed to be cleaned, standardized, and prepared for reliable reporting. Because each file contained more than 14,000 rows, manual processing was inefficient and increased the risk of inconsistencies.</p>
+      <p><strong>Tools:</strong> Python, openpyxl, dataclasses, Excel automation, data validation</p>
+      <p><strong>What I did:</strong> Built a Python workflow that automated the ingestion and preparation of multiple Excel files by detecting header structures, identifying valid data ranges, normalizing formats, and organizing rows into structured records for downstream analysis.</p>
+      <p><strong>Technical Approach:</strong> Designed reusable helper functions to manage common spreadsheet challenges such as variable layouts, inconsistent field types, empty row ranges, and date parsing. The workflow also included validation logic and controlled writing routines to ensure safer updates and more reliable outputs.</p>
+      <p><strong>Impact:</strong> Improved data consistency, reduced manual preparation time, and created a scalable process for transforming raw Excel files into analysis-ready datasets.</p>
+      <p><strong>Confidentiality:</strong> Internal logic, file structures, and full code are proprietary; this portfolio summary focuses on the workflow architecture and technical contribution.</p>
+
+      <p class="gallery-title">Selected Technical Logic</p>
+      <p class="note">
+        Redacted code excerpts highlighting key logic used to process large Excel datasets reliably and at scale.
+      </p>
+
+      <div class="project-gallery">
+        <figure class="gallery-item">
+          <a href="./images/excel-flow1.png" target="_blank">
+            <img src="./images/excel-flow1.png" alt="Dynamic header detection logic">
+          </a>
+          <figcaption>
+            <strong>Dynamic Header Detection</strong><br>
+            Detects the correct header row and maps required columns dynamically, allowing the workflow to process Excel sheets even when the structure is not perfectly fixed.
+          </figcaption>
+        </figure>
+
+        <figure class="gallery-item">
+          <a href="./images/excel-flow2.png" target="_blank">
+            <img src="./images/excel-flow2.png" alt="True data range detection logic">
+          </a>
+          <figcaption>
+            <strong>True Data Range Detection</strong><br>
+            Identifies the true last row containing relevant data, avoiding unnecessary processing of large empty ranges often found in real-world Excel files.
+          </figcaption>
+        </figure>
+
+        <figure class="gallery-item">
+          <a href="./images/excel-flow3.png" target="_blank">
+            <img src="./images/excel-flow3.png" alt="Multi-file record extraction logic">
+          </a>
+          <figcaption>
+            <strong>Multi-File Record Extraction</strong><br>
+            Scans multiple Excel files, validates required fields, extracts relevant records, and structures the data into a consistent format for downstream processing.
+          </figcaption>
+        </figure>
+      </div>
     </div>
-  </section>
 
   <section class="section">
     <h2>Contact</h2>
