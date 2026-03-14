@@ -6,7 +6,7 @@
   <title>Bryan Cervantes | Portfolio</title>
   <style>
     :root {
-      --bg: #f6f8fb;
+      --bg: #f4f7fb;
       --surface: #ffffff;
       --surface-soft: #f8fafc;
       --text: #1f2937;
@@ -17,8 +17,8 @@
       --primary: #0f766e;
       --primary-dark: #0b5f59;
       --accent: #0a66c2;
-      --shadow: 0 10px 25px rgba(15, 23, 42, 0.07);
-      --radius: 18px;
+      --shadow: 0 10px 28px rgba(15, 23, 42, 0.08);
+      --radius: 20px;
     }
 
     * {
@@ -31,12 +31,12 @@
 
     body {
       font-family: Arial, sans-serif;
-      max-width: 1100px;
+      max-width: 1120px;
       margin: 0 auto;
-      padding: 24px 20px 80px;
+      padding: 24px 20px 90px;
       line-height: 1.65;
       color: var(--text);
-      background: linear-gradient(180deg, #f8fafc 0%, #f4f7fb 100%);
+      background: linear-gradient(180deg, #f8fafc 0%, #f3f6fb 100%);
     }
 
     h1, h2, h3 {
@@ -45,17 +45,18 @@
     }
 
     h1 {
-      font-size: 2.5rem;
+      font-size: 2.6rem;
       margin-bottom: 8px;
+      line-height: 1.15;
     }
 
     h2 {
-      font-size: 1.7rem;
-      margin-bottom: 18px;
+      font-size: 1.8rem;
+      margin-bottom: 16px;
     }
 
     h3 {
-      font-size: 1.2rem;
+      font-size: 1.22rem;
       margin-bottom: 14px;
     }
 
@@ -82,8 +83,8 @@
       gap: 18px;
       padding: 14px 18px;
       margin-bottom: 28px;
-      background: rgba(255, 255, 255, 0.9);
-      border: 1px solid rgba(199, 210, 227, 0.85);
+      background: rgba(255, 255, 255, 0.92);
+      border: 1px solid rgba(199, 210, 227, 0.88);
       border-radius: 16px;
       backdrop-filter: blur(10px);
       box-shadow: var(--shadow);
@@ -98,13 +99,13 @@
     .nav-links {
       display: flex;
       flex-wrap: wrap;
-      gap: 14px;
+      gap: 12px;
       align-items: center;
     }
 
     .nav-links a {
       color: var(--text);
-      font-size: 0.96rem;
+      font-size: 0.95rem;
       font-weight: 600;
       padding: 8px 12px;
       border-radius: 999px;
@@ -119,6 +120,14 @@
 
     .section {
       margin-bottom: 34px;
+    }
+
+    .content-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 22px;
+      padding: 28px 24px;
+      box-shadow: var(--shadow);
     }
 
     .hero {
@@ -153,11 +162,7 @@
       font-size: 1rem;
       color: var(--text);
       max-width: 920px;
-      margin-bottom: 14px;
-    }
-
-    .hero-summary + .hero-summary {
-      margin-bottom: 22px;
+      margin-bottom: 12px;
     }
 
     .hero-actions {
@@ -223,14 +228,6 @@
       font-weight: 700;
     }
 
-    .content-card {
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: 22px;
-      padding: 26px 24px;
-      box-shadow: var(--shadow);
-    }
-
     .muted {
       color: var(--muted);
     }
@@ -259,6 +256,18 @@
       box-shadow: 0 6px 16px rgba(15, 23, 42, 0.08);
     }
 
+    .section-header {
+      margin-bottom: 18px;
+    }
+
+    .section-kicker {
+      color: var(--primary-dark);
+      font-weight: 700;
+      font-size: 0.92rem;
+      margin-bottom: 8px;
+      display: inline-block;
+    }
+
     .project {
       background: var(--surface);
       border: 1px solid var(--border);
@@ -268,15 +277,15 @@
       box-shadow: var(--shadow);
     }
 
-    .project p:last-child {
-      margin-bottom: 0;
-    }
-
     .project-gallery {
       display: grid;
       grid-template-columns: repeat(2, minmax(0, 1fr));
       gap: 18px;
       margin-top: 18px;
+    }
+
+    .project-gallery.single {
+      grid-template-columns: 1fr;
     }
 
     .gallery-item {
@@ -295,6 +304,10 @@
       border-color: #b7c6db;
     }
 
+    .gallery-item.featured {
+      grid-column: 1 / -1;
+    }
+
     .gallery-item a {
       width: 100%;
       height: 420px;
@@ -308,12 +321,20 @@
       text-decoration: none;
     }
 
+    .gallery-item.featured a {
+      height: 500px;
+    }
+
+    .project-gallery.single .gallery-item a {
+      height: 500px;
+    }
+
     .gallery-item a::after {
       content: "Click to enlarge";
       position: absolute;
       bottom: 10px;
       right: 10px;
-      background: rgba(15, 23, 42, 0.8);
+      background: rgba(15, 23, 42, 0.82);
       color: #ffffff;
       font-size: 0.78rem;
       padding: 6px 10px;
@@ -370,6 +391,11 @@
       margin-top: 18px;
     }
 
+    .contact-note {
+      color: var(--muted);
+      margin-bottom: 8px;
+    }
+
     .back-to-top {
       position: fixed;
       right: 22px;
@@ -395,9 +421,9 @@
       text-decoration: none;
     }
 
-    @media (max-width: 820px) {
+    @media (max-width: 860px) {
       body {
-        padding: 18px 14px 80px;
+        padding: 18px 14px 84px;
       }
 
       .top-nav {
@@ -405,12 +431,12 @@
         align-items: flex-start;
       }
 
-      .hero {
-        padding: 26px 22px;
-      }
-
       h1 {
         font-size: 2rem;
+      }
+
+      .hero {
+        padding: 26px 22px;
       }
     }
 
@@ -419,7 +445,13 @@
         grid-template-columns: 1fr;
       }
 
-      .gallery-item a {
+      .gallery-item.featured {
+        grid-column: auto;
+      }
+
+      .gallery-item a,
+      .gallery-item.featured a,
+      .project-gallery.single .gallery-item a {
         height: 320px;
       }
 
@@ -449,16 +481,16 @@
   </nav>
 
   <header class="hero">
-    <span class="hero-topline">Finance • Supply Chain • Data & Automation</span>
+    <span class="hero-topline">Finance • Supply Chain • Dashboards • Automation</span>
     <h1>Bryan Cervantes</h1>
     <p class="hero-subtitle">Financial & Business Intelligence Analyst</p>
 
     <p class="hero-summary">
-      Financial & Business Intelligence Analyst with a dual background in Finance and Management Information Systems. Experienced in improving supply chain performance, reporting accuracy, and business profitability through data analysis, financial planning, workflow automation, and dashboard development.
+      Financial & Business Intelligence Analyst with a dual background in Finance and Management Information Systems, focused on turning operational and commercial data into structured reporting, automation workflows, and decision-support dashboards.
     </p>
 
     <p class="hero-summary">
-      Strong background in budgeting, forecasting, Excel-based analysis, ERP-driven operations, Python automation, Power BI, Streamlit, Power Automate, APIs, SQL, and cross-functional reporting solutions that improve visibility, efficiency, and decision-making.
+      Experienced in supply chain analytics, Excel and Python automation, Power BI, Streamlit, SQL, Power Automate, APIs, and ERP-driven reporting across finance, inventory, and operations environments.
     </p>
 
     <div class="hero-actions">
@@ -474,14 +506,17 @@
       <span class="highlight-pill">Streamlit</span>
       <span class="highlight-pill">Excel Automation</span>
       <span class="highlight-pill">SQL</span>
-      <span class="highlight-pill">ERP Systems</span>
+      <span class="highlight-pill">Inventory Analytics</span>
       <span class="highlight-pill">Forecasting</span>
-      <span class="highlight-pill">Supply Chain Analytics</span>
+      <span class="highlight-pill">ERP Systems</span>
     </div>
   </header>
 
   <section class="section content-card" id="about">
-    <h2>About Me</h2>
+    <div class="section-header">
+      <span class="section-kicker">Professional Profile</span>
+      <h2>About Me</h2>
+    </div>
     <p>
       I come from a background in Finance and Management Information Systems, combining business knowledge with technical and analytical skills to solve problems, improve processes, and support better decision-making.
     </p>
@@ -491,7 +526,10 @@
   </section>
 
   <section class="section content-card" id="skills">
-    <h2>Core Skills</h2>
+    <div class="section-header">
+      <span class="section-kicker">What I Work With</span>
+      <h2>Core Skills</h2>
+    </div>
     <div class="skills-wrap">
       <span class="skill-pill">Inventory Planning</span>
       <span class="skill-pill">SKU-Level Analysis</span>
@@ -511,7 +549,95 @@
   </section>
 
   <section class="section" id="projects">
-    <h2>Selected Projects</h2>
+    <div class="section-header">
+      <span class="section-kicker">Selected Work</span>
+      <h2>Projects</h2>
+    </div>
+
+    <div class="project">
+      <h3>Interactive Dashboards for Operational, Contract, and Forecast Analysis</h3>
+      <p><strong>Context:</strong> Built dashboard solutions to consolidate operational, contract, and performance information into interactive views that support faster analysis and more structured decision-making. My dashboard experience combines Power BI, Python (Streamlit), and Excel-based reporting.</p>
+      <p><strong>Tools:</strong> Power BI, Python, Streamlit, Excel, pandas, Plotly</p>
+      <p><strong>What I did:</strong> Designed and developed dashboards for KPI monitoring, contract detail analysis, vessel and operational reporting, and inventory-oriented forecast views. The solutions included interactive filters, drill-down tables, summary cards, category breakdowns, and visual outputs tailored to business users.</p>
+      <p><strong>Technical Approach:</strong> Combined data preparation, feature engineering, forecasting logic, and dashboard rendering into reusable workflows. In Streamlit, I built functions for robust data loading, metric standardization, forecasting thresholds, and business-facing analytical views. In Power BI and Excel, I structured dashboards to improve readability, navigation, and reporting efficiency.</p>
+      <p><strong>Business Value:</strong> These dashboards improved visibility across large datasets, reduced manual reporting effort, and made operational and analytical information easier to consume for stakeholders.</p>
+      <p><strong>Impact:</strong> Enabled faster access to key metrics, more interactive analysis, and clearer decision support across operational and reporting workflows.</p>
+      <p><strong>Confidentiality:</strong> Internal datasets, logic, and full deliverables are proprietary; this portfolio summary highlights the dashboard design, analytical logic, and business value of the solutions.</p>
+
+      <p class="gallery-title">Dashboard Snapshots</p>
+      <p class="note">
+        Selected examples of dashboard interfaces developed for operational visibility, reporting support, and analytical exploration across business and independent projects.
+      </p>
+
+      <div class="project-gallery">
+        <figure class="gallery-item featured">
+          <a href="./images/Dashboard-flow1.png" target="_blank">
+            <img src="./images/Dashboard-flow1.png" alt="Operational summary dashboard">
+          </a>
+          <figcaption>
+            <strong>Operational Summary Dashboard</strong><br>
+            Interactive KPI and category dashboard used to summarize voyage activity, vessel mix, forecast comparisons, and arrival distributions.
+          </figcaption>
+        </figure>
+
+        <figure class="gallery-item">
+          <a href="./images/Dashboard-flow2.png" target="_blank">
+            <img src="./images/Dashboard-flow2.png" alt="Contract detail dashboard">
+          </a>
+          <figcaption>
+            <strong>Contract and Detail Analysis Dashboard</strong><br>
+            Multi-table dashboard layout designed to review contract records, vessel details, and supporting operational information in a structured format.
+          </figcaption>
+        </figure>
+
+        <figure class="gallery-item">
+          <a href="./images/Dashboard-flow1.1.png" target="_blank">
+            <img src="./images/Dashboard-flow1.1.png" alt="Independent dashboard concept">
+          </a>
+          <figcaption>
+            <strong>Independent Visualization Concept</strong><br>
+            Concept dashboard focused on visual storytelling, thematic design, and information hierarchy for a more immersive user experience.
+          </figcaption>
+        </figure>
+      </div>
+
+      <p class="gallery-title">Selected Technical Logic</p>
+      <p class="note">
+        Redacted code excerpts showing some of the core analytical and dashboard-building logic behind the Streamlit application.
+      </p>
+
+      <div class="project-gallery">
+        <figure class="gallery-item">
+          <a href="./images/Dashboard-flow3.png" target="_blank">
+            <img src="./images/Dashboard-flow3.png" alt="Robust data loading and preparation logic">
+          </a>
+          <figcaption>
+            <strong>Robust Data Loading and Preparation</strong><br>
+            Standardizes raw input data by handling source selection, encoding issues, and early-stage preparation needed for reliable downstream dashboard analysis.
+          </figcaption>
+        </figure>
+
+        <figure class="gallery-item">
+          <a href="./images/Dashboard-flow4.png" target="_blank">
+            <img src="./images/Dashboard-flow4.png" alt="Forecast and threshold logic">
+          </a>
+          <figcaption>
+            <strong>Forecast and Threshold Logic</strong><br>
+            Uses a 3-month moving average, volatility measurement, and service-level assumptions to estimate demand, safety stock, and optimal stock levels.
+          </figcaption>
+        </figure>
+
+        <figure class="gallery-item">
+          <a href="./images/Dashboard-flow5.png" target="_blank">
+            <img src="./images/Dashboard-flow5.png" alt="Inventory analysis dashboard logic">
+          </a>
+          <figcaption>
+            <strong>Inventory Analysis Dashboard Logic</strong><br>
+            Integrates business rules, parameter selection, and analytical scope controls to generate a decision-support view for inventory monitoring and forecast comparison.
+          </figcaption>
+        </figure>
+      </div>
+    </div>
 
     <div class="project">
       <h3>Power Automate Workflow for Calendly Revenue and Cost Center Allocation</h3>
@@ -532,28 +658,40 @@
           <a href="./images/calendly-flow-overview1.png" target="_blank">
             <img src="./images/calendly-flow-overview1.png" alt="Calendly workflow overview step 1">
           </a>
-          <figcaption><strong>Workflow Overview</strong><br>Trigger structure and automation entry point for the allocation process.</figcaption>
+          <figcaption>
+            <strong>Workflow Overview</strong><br>
+            Trigger structure and automation entry point for the allocation process.
+          </figcaption>
         </figure>
 
         <figure class="gallery-item">
           <a href="./images/calendly-flow-overview2.png" target="_blank">
             <img src="./images/calendly-flow-overview2.png" alt="Calendly workflow overview step 2">
           </a>
-          <figcaption><strong>Data Extraction & Transformation</strong><br>Logic used to pull raw appointment data and convert it into a structured working format.</figcaption>
+          <figcaption>
+            <strong>Data Extraction & Transformation</strong><br>
+            Logic used to pull raw appointment data and convert it into a structured working format.
+          </figcaption>
         </figure>
 
         <figure class="gallery-item">
           <a href="./images/calendly-flow-overview3.png" target="_blank">
             <img src="./images/calendly-flow-overview3.png" alt="Calendly workflow overview step 3">
           </a>
-          <figcaption><strong>Business Rules Logic</strong><br>Allocation logic used to map revenue activity to the correct cost center or corporate account.</figcaption>
+          <figcaption>
+            <strong>Business Rules Logic</strong><br>
+            Allocation logic used to map revenue activity to the correct cost center or corporate account.
+          </figcaption>
         </figure>
 
         <figure class="gallery-item">
           <a href="./images/calendly-flow-overview4.png" target="_blank">
             <img src="./images/calendly-flow-overview4.png" alt="Calendly workflow overview step 4">
           </a>
-          <figcaption><strong>Accounting-Ready Output</strong><br>Final structured output prepared for internal administration, month-end close, and audit support.</figcaption>
+          <figcaption>
+            <strong>Accounting-Ready Output</strong><br>
+            Final structured output prepared for internal administration, month-end close, and audit support.
+          </figcaption>
         </figure>
       </div>
     </div>
@@ -572,12 +710,15 @@
         Redacted screenshot showing the automated Python workflow used for extraction, filtering, consolidation, and daily delivery.
       </p>
 
-      <div class="project-gallery">
+      <div class="project-gallery single">
         <figure class="gallery-item">
           <a href="./images/Python-flow-overview1.png" target="_blank">
             <img src="./images/Python-flow-overview1.png" alt="Python workflow overview">
           </a>
-          <figcaption><strong>Automated Daily Pipeline</strong><br>End-to-end extraction, consolidation, and reporting workflow used to deliver maritime updates to stakeholders.</figcaption>
+          <figcaption>
+            <strong>Automated Daily Pipeline</strong><br>
+            End-to-end extraction, consolidation, and reporting workflow used to deliver maritime updates to stakeholders.
+          </figcaption>
         </figure>
       </div>
     </div>
@@ -601,97 +742,45 @@
           <a href="./images/excel-flow1.png" target="_blank">
             <img src="./images/excel-flow1.png" alt="Dynamic header detection logic">
           </a>
-          <figcaption><strong>Dynamic Header Detection</strong><br>Detects the correct header row and maps required columns dynamically, allowing the workflow to process Excel sheets even when the structure is not perfectly fixed.</figcaption>
+          <figcaption>
+            <strong>Dynamic Header Detection</strong><br>
+            Detects the correct header row and maps required columns dynamically, allowing the workflow to process Excel sheets even when the structure is not perfectly fixed.
+          </figcaption>
         </figure>
 
         <figure class="gallery-item">
           <a href="./images/excel-flow2.png" target="_blank">
             <img src="./images/excel-flow2.png" alt="True data range detection logic">
           </a>
-          <figcaption><strong>True Data Range Detection</strong><br>Identifies the true last row containing relevant data, avoiding unnecessary processing of large empty ranges often found in real-world Excel files.</figcaption>
+          <figcaption>
+            <strong>True Data Range Detection</strong><br>
+            Identifies the true last row containing relevant data, avoiding unnecessary processing of large empty ranges often found in real-world Excel files.
+          </figcaption>
         </figure>
 
         <figure class="gallery-item">
           <a href="./images/excel-flow3.png" target="_blank">
             <img src="./images/excel-flow3.png" alt="Multi-file record extraction logic">
           </a>
-          <figcaption><strong>Multi-File Record Extraction</strong><br>Scans multiple Excel files, validates required fields, extracts relevant records, and structures the data into a consistent format for downstream processing.</figcaption>
-        </figure>
-      </div>
-    </div>
-
-    <div class="project">
-      <h3>Interactive Dashboards for Operational, Contract, and Forecast Analysis</h3>
-      <p><strong>Context:</strong> Built dashboard solutions to consolidate operational, contract, and performance information into interactive views that support faster analysis and more structured decision-making. My dashboard experience combines Power BI, Python (Streamlit), and Excel-based reporting.</p>
-      <p><strong>Tools:</strong> Power BI, Python, Streamlit, Excel, pandas, Plotly</p>
-      <p><strong>What I did:</strong> Designed and developed dashboards for KPI monitoring, contract detail analysis, vessel and operational reporting, and inventory-oriented forecast views. The solutions included interactive filters, drill-down tables, summary cards, category breakdowns, and visual outputs tailored to business users.</p>
-      <p><strong>Technical Approach:</strong> Combined data preparation, feature engineering, forecasting logic, and dashboard rendering into reusable workflows. In Streamlit, I built functions for robust data loading, metric standardization, forecasting thresholds, and business-facing analytical views. In Power BI and Excel, I structured dashboards to improve readability, navigation, and reporting efficiency.</p>
-      <p><strong>Business Value:</strong> These dashboards improved visibility across large datasets, reduced manual reporting effort, and made operational and analytical information easier to consume for stakeholders.</p>
-      <p><strong>Impact:</strong> Enabled faster access to key metrics, more interactive analysis, and clearer decision support across operational and reporting workflows.</p>
-      <p><strong>Confidentiality:</strong> Internal datasets, logic, and full deliverables are proprietary; this portfolio summary highlights the dashboard design, analytical logic, and business value of the solutions.</p>
-
-      <p class="gallery-title">Dashboard Snapshots</p>
-      <p class="note">
-        Selected examples of dashboard interfaces developed for operational visibility, reporting support, and analytical exploration across business and independent projects.
-      </p>
-
-      <div class="project-gallery">
-        <figure class="gallery-item">
-          <a href="./images/Dashboard-flow1.png" target="_blank">
-            <img src="./images/Dashboard-flow1.png" alt="Operational summary dashboard">
-          </a>
-          <figcaption><strong>Operational Summary Dashboard</strong><br>Interactive KPI and category dashboard used to summarize voyage activity, vessel mix, forecast comparisons, and arrival distributions.</figcaption>
-        </figure>
-
-        <figure class="gallery-item">
-          <a href="./images/Dashboard-flow2.png" target="_blank">
-            <img src="./images/Dashboard-flow2.png" alt="Contract detail dashboard">
-          </a>
-          <figcaption><strong>Contract and Detail Analysis Dashboard</strong><br>Multi-table dashboard layout designed to review contract records, vessel details, and supporting operational information in a structured format.</figcaption>
-        </figure>
-
-        <figure class="gallery-item">
-          <a href="./images/Dashboard-flow1.1.png" target="_blank">
-            <img src="./images/Dashboard-flow1.1.png" alt="Independent dashboard concept">
-          </a>
-          <figcaption><strong>Independent Visualization Concept</strong><br>Concept dashboard focused on visual storytelling, thematic design, and information hierarchy for a more immersive user experience.</figcaption>
-        </figure>
-      </div>
-
-      <p class="gallery-title">Selected Technical Logic</p>
-      <p class="note">
-        Redacted code excerpts showing some of the core analytical and dashboard-building logic behind the Streamlit application.
-      </p>
-
-      <div class="project-gallery">
-        <figure class="gallery-item">
-          <a href="./images/Dashboard-flow3.png" target="_blank">
-            <img src="./images/Dashboard-flow3.png" alt="Robust data loading and preparation logic">
-          </a>
-          <figcaption><strong>Robust Data Loading and Preparation</strong><br>Standardizes raw input data by handling source selection, encoding issues, and early-stage preparation needed for reliable downstream dashboard analysis.</figcaption>
-        </figure>
-
-        <figure class="gallery-item">
-          <a href="./images/Dashboard-flow4.png" target="_blank">
-            <img src="./images/Dashboard-flow4.png" alt="Forecast and threshold logic">
-          </a>
-          <figcaption><strong>Forecast and Threshold Logic</strong><br>Uses a 3-month moving average, volatility measurement, and service-level assumptions to estimate demand, safety stock, and optimal stock levels.</figcaption>
-        </figure>
-
-        <figure class="gallery-item">
-          <a href="./images/Dashboard-flow5.png" target="_blank">
-            <img src="./images/Dashboard-flow5.png" alt="Inventory analysis dashboard logic">
-          </a>
-          <figcaption><strong>Inventory Analysis Dashboard Logic</strong><br>Integrates business rules, parameter selection, and analytical scope controls to generate a decision-support view for inventory monitoring and forecast comparison.</figcaption>
+          <figcaption>
+            <strong>Multi-File Record Extraction</strong><br>
+            Scans multiple Excel files, validates required fields, extracts relevant records, and structures the data into a consistent format for downstream processing.
+          </figcaption>
         </figure>
       </div>
     </div>
   </section>
 
   <section class="section content-card" id="contact">
-    <h2>Contact</h2>
+    <div class="section-header">
+      <span class="section-kicker">Let’s Connect</span>
+      <h2>Contact</h2>
+    </div>
+    <p class="contact-note">
+      Based in Vancouver, BC. Open to analyst, business intelligence, supply chain, reporting, inventory, and automation-focused roles.
+    </p>
     <p>
-      Interested in analyst, BI, supply chain, operations, inventory, or automation-focused roles.
+      If you would like to discuss my experience, review my resume, or connect regarding opportunities, feel free to reach out.
     </p>
     <div class="contact-links">
       <a class="btn btn-primary" href="mailto:cervantes.vargas.b@gmail.com">Email Me</a>
